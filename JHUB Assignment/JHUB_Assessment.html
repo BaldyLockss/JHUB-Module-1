@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order a Jackal</title>
+  <link rel="stylesheet" href="JHUB_Assessment.css">
+  <script src="JHUB_Assesment.js"></script>
+</head>
+
+<body>
+
+  <!--    Home section  -->
+
+  <main>
+    <header id="header-section">
+      <nav>
+        <ul>
+          <li><a onclick="homeNav();homeFade();" id="homeButton" href="#container-home">Home</a></li>
+          <li><a onclick="vehiclesNav();vehiclesFade();" id="vehiclesButton" href="#container-vehicles">Vehicles</a></li>
+          <li><a onclick="orderNav();orderFade();" id="orderButton" href="#container-order">Order</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="container-home">
+      <h1>Want to own your own military vehicle?</h1>
+      <p>Well now you can, here you can find a selection of vehicles used by us, the British Army here in the UK and on operations.</p>
+      <a onclick="orderNav(); orderFade();" href="#container-order">Order now</a>
+    </section>
+
+    <!--       vehicles section -->
+
+    <section id="container-vehicles">
+      <div>
+        <h5>Grizzly Quad 450.<br>Small, agile and capable!</h5><img src="https://portal-images.azureedge.net/auctions-2020/witham10109/images/6f6bdc96-7c11-4be2-bbbd-ab6600a385e1.jpg?w=1920&h=1920&mode=max" alt="grizzly quad">
+      </div>
+      <div>
+        <h5 id="spring">Springer.<br>Fun, agile and protected!</h5><img src="https://portal-images.azureedge.net/auctions-2020/witham10110/images/77c4e004-9633-453e-8f09-ab8200ac8776.jpg?w=540&h=360&mode=max" alt="springer">
+      </div>
+      <div>
+        <h5 id="land">Landrover.<br>The staple, go anywhere!</h5><img src="https://pbs.twimg.com/media/FZJwSEtXEAE23DF?format=jpg&name=4096x4096" alt="landrover">
+      </div>
+      <div>
+        <h5 id="jackal">Jackal.<br>All out fun!</h5><img src="https://supacat.com/wp-content/uploads/sites/3/2015/07/Jackal2A_610x508.jpg" alt="jackal">
+      </div>
+
+    </section>
+
+    <!-- order section -->
+
+    <section id="container-order">
+      <form name="formList">
+        <h2>Vehicle</h2><br>
+        <input type="checkbox" name="order" onchange="prices(0)" value="10000">Grizzly Quad 450 - £10,000.00<br>
+        <input type="checkbox" name="order" onchange="prices(1)" value="18000">Springer - £18,000.00<br>
+        <input type="checkbox" name="order" onchange="prices(2)" value="60000">Landrover - £60,000.00<br>
+        <input type="checkbox" name="order" onchange="prices(3)" value="120000">Jackal - £120,000.00<br>
+        <h2>Spares</h2><br>
+        Spares packs contain an engine, transmission,<br> starter motor and a spare wheel.<br><br>
+        <input type="checkbox" name="order" onchange="prices(4)" value="2500">Grizzly Quad 450 spares pack - £2,500.00<br>
+        <input type="checkbox" name="order" onchange="prices(5)" value="5000">Springer spares pack - £5,000.00<br>
+        <input type="checkbox" name="order" onchange="prices(6)" value="25000">Landrover spares pack - £25,000.00<br>
+        <input type="checkbox" name="order" onchange="prices(7)" value="35000">Jackal spares pack - £35,000.00<br>
+        <h2>Total Price</h2><br>
+        <input id="total" value="£0" readonly="readonly" type="text" name="total"><br><br>
+        <a id="purchase" onclick="chosen();">Purchase</a>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
